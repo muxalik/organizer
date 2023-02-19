@@ -1,5 +1,6 @@
 <?php 
 
 return [
-    'login' => 'You have successfully logged in!'
+    'login' => 'You have logged in successfully!',
+    'register' => 'You have registered successfully!'
 ];

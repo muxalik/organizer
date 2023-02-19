@@ -22,6 +22,6 @@ class RegisterController extends Controller
 
         return redirect()
             ->route('home')
-            ->with('success', __('messages.login'));
+            ->with('success', __('messages.register'));
     }
 }

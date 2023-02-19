@@ -26,7 +26,9 @@ class LoginController extends Controller
             'email' => $credentials['email-name'], 
             'password' => $credentials['password']]))
         {
-            return redirect()->route('home');
+            return redirect()
+                ->route('home')
+                ->with('success', __('messages.login'));
         }
 
         return back()->withErrors([
