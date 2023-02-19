@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Home page! Welcome!</h1>
+    {{ session('success') }}
 </body>
 </html>

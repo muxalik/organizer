@@ -10,9 +10,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Register Cover - Pages |
-        Sneat -
-        Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Register</title>
     <meta name="description"
         content="Most Powerful &amp; Comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers!" />
     <meta name="keywords" content="dashboard, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5">
@@ -24,27 +22,6 @@
     <link rel="icon" type="image/x-icon"
         href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/favicon/favicon.ico" />
 
-
-    <!-- Google Tag Manager (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5DDHKGP');
-    </script>
-    <!-- End Google Tag Manager -->
-
-
     <!-- Include Styles -->
     <!-- BEGIN: Theme CSS-->
     <!-- Fonts -->
@@ -53,13 +30,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
-
-    <link rel="stylesheet"
-        href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/fonts/boxicons.css?id=87122b3a3900320673311cebdeb618da" />
-    <link rel="stylesheet"
-        href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/fonts/fontawesome.css?id=89157e39c524ff7f679d3aebf872b7b9" />
-    <link rel="stylesheet"
-        href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/fonts/flag-icons.css?id=403b97c176f3cdf56a3cbf09107ee240" />
 
     <!-- Core CSS -->
     <link rel="stylesheet"
@@ -88,73 +58,11 @@
     <link rel="stylesheet"
         href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/css/pages/page-auth.css">
 
-    <!-- Include Scripts for customizer, helper, analytics, config -->
-    <!-- laravel style -->
-    <script
-        src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/js/helpers.js">
-    </script>
-    <!-- beautify ignore:start -->
-  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-  <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-  <script
-      src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/js/template-customizer.js">
-  </script>
 
-  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-  <script src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/js/config.js">
-  </script>
-
-  <script>
-      window.templateCustomizer = new TemplateCustomizer({
-          cssPath: '',
-          themesPath: '',
-          defaultShowDropdownOnHover: true, // true/false (for horizontal layout only)
-          displayCustomizer: true,
-          lang: 'en',
-          pathResolver: function(path) {
-              var resolvedPaths = {
-                  // Core stylesheets
-                  'core.css': 'https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/css/rtl/core.css?id=f1cefeba0c68d327230d2f6538f276fa',
-                  'core-dark.css': 'https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/css/rtl/core-dark.css?id=a7e1b898874fb932a0d06a8338e83740',
-
-                  // Themes
-                  'theme-default.css': 'https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/css/rtl/theme-default.css?id=cc3d4ef91c8c858754d8ed20c78a3a3c',
-                  'theme-default-dark.css': 'https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/css/rtl/theme-default-dark.css?id=9a338740c08a948bb83b45bbd12fb4aa',
-                  'theme-bordered.css': 'https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/css/rtl/theme-bordered.css?id=8d92124ca46dc5afef2fb07a37c27881',
-                  'theme-bordered-dark.css': 'https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/css/rtl/theme-bordered-dark.css?id=18f699a37ba20ce77d7e28d9cb364a77',
-                  'theme-semi-dark.css': 'https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/css/rtl/theme-semi-dark.css?id=91f37f96f7ed4b04e63de6773e24ffa5',
-                  'theme-semi-dark-dark.css': 'https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/css/rtl/theme-semi-dark-dark.css?id=0c263a3742f3ca2d2cb3e92439d5f540',
-              }
-              return resolvedPaths[path] || path;
-          },
-          'controls': ["rtl", "style", "layoutType", "showDropdownOnHover", "layoutNavbarFixed",
-              "layoutFooterFixed", "themes"
-          ],
-      });
-  </script>
-  <!-- beautify ignore:end -->
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
+    <!-- beautify ignore:end -->
 </head>
 
 <body>
-
-    <!-- Google Tag Manager (noscript) (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DDHKGP" height="0" width="0"
-            style="display: none; visibility: hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-
     <!-- Layout Content -->
 
     <!-- Content -->
@@ -227,38 +135,38 @@
                                     </g>
                                 </svg>
                             </span>
-                            <span class="app-brand-text demo text-body fw-bolder">Sneat</span>
+                            <span class="app-brand-text demo text-body fw-bolder">Registration</span>
                         </a>
                     </div>
                     <!-- /Logo -->
                     <h4 class="mb-2">Adventure starts here 🚀</h4>
-                    <p class="mb-4">Make your app management easy and fun!</p>
-
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+                    <p class="mb-4">Make your project management easy and fun!</p>
 
                     <form id="formAuthentication" class="mb-3" action="{{ route('register') }}" method="POST">
                         @csrf
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <label for="name" class="form-label">Username</label>
                             <input type="text" class="form-control @error('name') is-invalid @enderror"
                                 id="name" name="name" placeholder="Enter your username"
                                 value="{{ old('name') }}" autofocus>
+                            @error('name')
+                                <div class="fv-plugins-message-container invalid-feedback" style="display: block;">
+                                    <div>{{ $message }}</div>
+                                </div>
+                            @enderror
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <label for="email" class="form-label">Email</label>
                             <input type="text" class="form-control @error('email') is-invalid @enderror"
                                 id="email" name="email" placeholder="Enter your email"
                                 value="{{ old('email') }}">
+                            @error('email')
+                                <div class="fv-plugins-message-container invalid-feedback" style="display: block;">
+                                    <div>{{ $message }}</div>
+                                </div>
+                            @enderror
                         </div>
-                        <div class="mb-3 form-password-toggle">
+                        <div class="mb-2 form-password-toggle">
                             <label class="form-label" for="password">Password</label>
                             <div class="input-group input-group-merge">
                                 <input type="password" id="password"
@@ -267,10 +175,15 @@
                                     aria-describedby="password" />
                                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                             </div>
+                            @error('password')
+                                <div class="fv-plugins-message-container invalid-feedback" style="display: block;">
+                                    <div>{{ $message }}</div>
+                                </div>
+                            @enderror
                         </div>
 
-                        <div class="mb-3 form-password-toggle">
-                            <label class="form-label" for="password">Password</label>
+                        <div class="mb-2 form-password-toggle">
+                            <label class="form-label" for="password">Confirm Password</label>
                             <div class="input-group input-group-merge">
                                 <input type="password" id="password"
                                     class="form-control @error('password') is-invalid @enderror"
@@ -279,17 +192,27 @@
                                     aria-describedby="password" />
                                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                             </div>
+                            @error('password')
+                                <div class="fv-plugins-message-container invalid-feedback" style="display: block;">
+                                    <div>{{ $message }}</div>
+                                </div>
+                            @enderror
                         </div>
 
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="terms-conditions"
-                                    name="terms">
-                                <label class="form-check-label" for="terms-conditions">
+                                <input class="form-check-input @error('terms') is-invalid @enderror" type="checkbox"
+                                    id="terms-conditions" name="terms">
+                                <label class="form-check-label" for="terms-conditions" style="color:var(--bs-body-color);">
                                     I agree to
                                     <a href="javascript:void(0);">privacy policy & terms</a>
                                 </label>
                             </div>
+                            @error('terms')
+                                <div class="fv-plugins-message-container invalid-feedback" style="display: block;">
+                                    <div>{{ $message }}</div>
+                                </div>
+                            @enderror
                         </div>
                         <button class="btn btn-primary d-grid w-100">
                             Sign up

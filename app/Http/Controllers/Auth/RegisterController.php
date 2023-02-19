@@ -18,8 +18,10 @@ class RegisterController extends Controller
 
     public function register(RegisterRequest $request): RedirectResponse
     {
-        $user = User::create($request->validated);
+        auth()->login(User::create($request->validated()));
 
-        return redirect('home');
+        return redirect()
+            ->route('home')
+            ->with('success', __('messages.login'));
     }
 }
