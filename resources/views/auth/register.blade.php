@@ -1,70 +1,8 @@
-<!DOCTYPE html>
+@extends('layouts.layout')
 
-<html lang="en" class="light-style     customizer-hide" dir="ltr" data-theme="theme-default"
-    data-assets-path="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/"
-    data-base-url="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1"
-    data-framework="laravel" data-template="blank-menu-theme-default-light">
+@section('title', 'Registration')
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-
-    <title>Register</title>
-    <meta name="description"
-        content="Most Powerful &amp; Comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers!" />
-    <meta name="keywords" content="dashboard, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5">
-    <!-- laravel CRUD token -->
-    <meta name="csrf-token" content="BMl2YEbGKRaugAVNKidDrSQ7o6vzwGy2vu4Lq6p8">
-    <!-- Canonical SEO -->
-    <link rel="canonical" href="https://themeselection.com/item/sneat-bootstrap-html-laravel-admin-template/">
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon"
-        href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/favicon/favicon.ico" />
-
-    <!-- Include Styles -->
-    <!-- BEGIN: Theme CSS-->
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
-
-    <!-- Core CSS -->
-    <link rel="stylesheet"
-        href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/css/rtl/core.css?id=f1cefeba0c68d327230d2f6538f276fa"
-        class="template-customizer-core-css" />
-    <link rel="stylesheet"
-        href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/css/rtl/theme-default.css?id=cc3d4ef91c8c858754d8ed20c78a3a3c"
-        class="template-customizer-theme-css" />
-    <link rel="stylesheet"
-        href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/css/demo.css?id=24b55ca26d6f2bafc5a21ff5a4bcdfb3" />
-
-
-    <link rel="stylesheet"
-        href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css?id=d9fa6469688548dca3b7e6bd32cb0dc6" />
-    <link rel="stylesheet"
-        href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/typeahead-js/typeahead.css?id=8fc311b79b2aeabf94b343b6337656cf" />
-
-    <!-- Vendor Styles -->
-    <!-- Vendor -->
-    <link rel="stylesheet"
-        href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/formvalidation/dist/css/formValidation.min.css" />
-
-
-    <!-- Page Styles -->
-    <!-- Page -->
-    <link rel="stylesheet"
-        href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/css/pages/page-auth.css">
-
-
-    <!-- beautify ignore:end -->
-</head>
-
-<body>
-    <!-- Layout Content -->
-
+@section('content')
     <!-- Content -->
     <div class="authentication-wrapper authentication-cover">
         <div class="authentication-inner row m-0">
@@ -104,8 +42,7 @@
                                             d="M20.6,7.13333333 L25.6,13.8 C26.2627417,14.6836556 26.0836556,15.9372583 25.2,16.6 C24.8538077,16.8596443 24.4327404,17 24,17 L14,17 C12.8954305,17 12,16.1045695 12,15 C12,14.5672596 12.1403557,14.1461923 12.4,13.8 L17.4,7.13333333 C18.0627417,6.24967773 19.3163444,6.07059163 20.2,6.73333333 C20.3516113,6.84704183 20.4862915,6.981722 20.6,7.13333333 Z"
                                             id="path-5"></path>
                                     </defs>
-                                    <g id="g-app-brand" stroke="none" stroke-width="1" fill="none"
-                                        fill-rule="evenodd">
+                                    <g id="g-app-brand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                         <g id="Brand-Logo" transform="translate(-27.000000, -15.000000)">
                                             <g id="Icon" transform="translate(27.000000, 15.000000)">
                                                 <g id="Mask" transform="translate(0.000000, 8.000000)">
@@ -146,9 +83,8 @@
                         @csrf
                         <div class="mb-2">
                             <label for="name" class="form-label">Username</label>
-                            <input type="text" class="form-control @error('name') is-invalid @enderror"
-                                id="name" name="name" placeholder="Enter your username"
-                                value="{{ old('name') }}" autofocus>
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
+                                name="name" placeholder="Enter your username" value="{{ old('name') }}" autofocus>
                             @error('name')
                                 <div class="fv-plugins-message-container invalid-feedback" style="display: block;">
                                     <div>{{ $message }}</div>
@@ -157,9 +93,8 @@
                         </div>
                         <div class="mb-2">
                             <label for="email" class="form-label">Email</label>
-                            <input type="text" class="form-control @error('email') is-invalid @enderror"
-                                id="email" name="email" placeholder="Enter your email"
-                                value="{{ old('email') }}">
+                            <input type="text" class="form-control @error('email') is-invalid @enderror" id="email"
+                                name="email" placeholder="Enter your email" value="{{ old('email') }}">
                             @error('email')
                                 <div class="fv-plugins-message-container invalid-feedback" style="display: block;">
                                     <div>{{ $message }}</div>
@@ -185,7 +120,7 @@
                         <div class="mb-2 form-password-toggle">
                             <label class="form-label" for="password">Confirm Password</label>
                             <div class="input-group input-group-merge">
-                                <input type="password" id="password"
+                                <input type="password" id="password_confirmation"
                                     class="form-control @error('password') is-invalid @enderror"
                                     name="password_confirmation"
                                     placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
@@ -199,11 +134,12 @@
                             @enderror
                         </div>
 
-                        <div class="mb-2">
+                        <div class="mb-3">
                             <div class="form-check">
                                 <input class="form-check-input @error('terms') is-invalid @enderror" type="checkbox"
                                     id="terms-conditions" name="terms">
-                                <label class="form-check-label" for="terms-conditions" style="color:var(--bs-body-color);">
+                                <label class="form-check-label" for="terms-conditions"
+                                    style="color:var(--bs-body-color);">
                                     I agree to
                                     <a href="javascript:void(0);">privacy policy & terms</a>
                                 </label>
@@ -249,9 +185,4 @@
         </div>
     </div>
     <!--/ Content -->
-
-    <!--/ Layout Content -->
-
-</body>
-
-</html>
+@endsection
