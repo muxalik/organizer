@@ -28,8 +28,6 @@ class LoginController extends Controller
         }
 
         return back()->onlyInput('email-name', $value)
-            ->withErrors([
-                'credentials' => __('messages.credentials')
-            ]);
+            ->withErrors(['credentials' => __('messages.credentials')]);
     }
 }
