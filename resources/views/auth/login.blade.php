@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed no-touch" dir="ltr">
 
 <head>
@@ -169,6 +168,10 @@
     </x-auth-wrapper>
     <!--/ Content -->
     <!--/ Layout Content -->
+    <x-scripts>
+        <script src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/js/pages-auth.js">
+        </script>
+    </x-scripts>
 </body>
 
 </html>
