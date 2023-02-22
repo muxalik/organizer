@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed no-touch" dir="ltr">
-
-<head>
-    <x-head title="Organizer - Home">
+<x-layout title="Organizer - Home">
+    <x-slot:head>
         <link rel="stylesheet"
             href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
         <link rel="stylesheet"
@@ -17,17 +14,13 @@
             href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/animate-css/animate.css" />
         <link rel="stylesheet"
             href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/sweetalert2/sweetalert2.css" />
-    </x-head>
-</head>
-
-<body>
-    <!-- Layout Content -->
-    <x-wrapper>
-        content here!
-    </x-wrapper>
-    <!--/ Layout Content -->
-
-    <x-scripts></x-scripts>
-</body>
-
-</html>
+    </x-slot:head>
+    <x-slot:content>
+        <!-- Layout Content -->
+        <x-wrapper>
+            content here!
+        </x-wrapper>
+        <!--/ Layout Content -->
+    </x-slot:content>
+    <x-slot:scripts></x-slot:scripts>
+</x-layout>
