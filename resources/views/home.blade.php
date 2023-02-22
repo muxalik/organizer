@@ -16,11 +16,13 @@
             href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/sweetalert2/sweetalert2.css" />
     </x-slot:head>
     <x-slot:content>
-        <!-- Layout Content -->
         <x-wrapper>
             content here!
         </x-wrapper>
-        <!--/ Layout Content -->
     </x-slot:content>
-    <x-slot:scripts></x-slot:scripts>
+    <x-slot:scripts>
+        <script
+            src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/js/dashboards-analytics.js">
+        </script>
+    </x-slot:scripts>
 </x-layout>

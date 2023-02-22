@@ -1,4 +1,4 @@
-@vite('resources/js/main.js')
+@vite('resources/js/search.js')
 <!-- Include Scripts -->
 <!-- BEGIN: Vendor JS-->
 <script

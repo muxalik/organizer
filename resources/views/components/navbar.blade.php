@@ -13,12 +13,10 @@
     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
 
         <!-- Search -->
-        <div class="navbar-nav align-items-center">
-            <div class="nav-item navbar-search-wrapper mb-0">
-                <a class="nav-item nav-link search-toggler px-0 d-flex" href="javascript:void(0);">
-                    <i class="bx bx-search bx-sm px-1"></i>
-                    <span class="d-none d-md-inline-block text-muted ml-2">Search (Ctrl+/)</span>
-                </a>
+        <div class="navbar-nav align-items-center" id="search">
+            <div class="nav-item navbar-search-wrapper mb-0 d-flex" role="button">
+                <i class="bx bx-search bx-sm px-1"></i>
+                <span class="d-none d-md-inline-block text-muted ml-2">Search</span>
             </div>
         </div>
         <!-- /Search -->
@@ -470,11 +468,11 @@
     </div>
 
     <!-- Search Small Screens -->
-    <div class="navbar-search-wrapper search-input-wrapper  d-none">
+    <div class="navbar-search-wrapper search-input-wrapper d-none" id="search-container">
         <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text"
                 class="form-control search-input container-xxl border-0 tt-input" placeholder="Search..."
                 aria-label="Search..." autocomplete="off" spellcheck="false" dir="auto"
-                style="position: relative; vertical-align: top;">
+                style="position: relative; vertical-align: top;" id="search-input">
             <pre aria-hidden="true"
                 style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Public Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
             <div class="tt-menu navbar-search-suggestion ps"
