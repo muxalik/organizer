@@ -1,16 +1,16 @@
-<x-auth-layout title="Organizer - Login">
+<x-auth-layout title="Verify Email">
     <x-slot:image>
-        <img src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/illustrations/boy-with-rocket-light.png"
-            class="img-fluid" alt="Login image" width="700" data-app-dark-img="illustrations/boy-with-rocket-dark.png"
-            data-app-light-img="illustrations/boy-with-rocket-light.png">
+        <img src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/illustrations/boy-verify-email-light.png"
+            class="img-fluid" alt="Login image" width="600" data-app-dark-img="illustrations/boy-verify-email-dark.png"
+            data-app-light-img="illustrations/boy-verify-email-light.png">
     </x-slot:image>
 
-    <!-- Login -->
-    <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg p-sm-5 p-4">
+    <!--  Verify email -->
+    <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg p-4 p-sm-5">
         <div class="w-px-400 mx-auto">
-            <!-- Logo -->
             <div class="app-brand mb-5">
-                <a href="" class="app-brand-link gap-2">
+                <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1"
+                    class="app-brand-link gap-2">
                     <span class="app-brand-logo demo"><svg width="25" viewBox="0 0 25 42" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <defs>
@@ -57,94 +57,30 @@
                             </g>
                         </svg>
                     </span>
-                    <span class="app-brand-text demo text-body fw-bolder">Logging</span>
+                    <span class="app-brand-text demo text-body fw-bolder">Email Verification</span>
                 </a>
             </div>
-            <!-- /Logo -->
-            <h4 class="mb-2">Welcome to Organizer! 👋</h4>
-            <p class="mb-4">Please sign-in to your account and start the adventure</p>
-
-            @error('credentials')
-                <div class="alert alert-danger">
-                    <ul class="list-unstyled mb-0">
-                        <li>{{ $message }}</li>
-                    </ul>
-                </div>
-            @enderror
-
-            <form id="formAuthentication" class="mb-3" action="{{ route('login') }}" method="POST">
-                @csrf
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email or Username</label>
-                    <input type="text"
-                        class="form-control @error('credentials') is-invalid @enderror @error('email-name') is-invalid @enderror"
-                        id="email" name="email-name" placeholder="Enter your email or username"
-                        value="{{ old('email-name') }}" autofocus>
-                    @error('email-name')
-                        <div class="fv-plugins-message-container invalid-feedback" style="display: block;">
-                            <div data-field="password" data-validator="notEmpty">{{ $message }}
-                            </div>
-                        </div>
-                    @enderror
-                </div>
-                <div class="mb-3 form-password-toggle">
-                    <div class="d-flex justify-content-between">
-                        <label class="form-label" for="password">Password</label>
-                        <a href=""><small>Forgot Password?</small></a>
-                    </div>
-                    <div class="input-group input-group-merge">
-                        <input type="password" id="password"
-                            class="form-control @error('credentials') is-invalid @enderror @error('password') is-invalid @enderror"
-                            name="password"
-                            placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                            aria-describedby="password" />
-                        <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-                    </div>
-                    @error('password')
-                        <div class="fv-plugins-message-container invalid-feedback" style="display: block;">
-                            <div data-field="password" data-validator="notEmpty">{{ $message }}
-                            </div>
-                        </div>
-                    @enderror
-                </div>
-                <div class="my-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="remember-me">
-                        <label class="form-check-label" for="remember-me">
-                            Remember Me
-                        </label>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
-                </div>
-            </form>
-
-            <p class="text-center">
-                <span>New on our platform?</span>
-                <a href="{{ route('register.form') }}">
-                    <span>Create an account</span>
-                </a>
+            @if(session('message'))
+                {{ session('message') }}
+            @endif
+            <h3 class="mb-2">Verify your email ✉️</h3>
+            <p class="text-start">
+                Account activation link sent to your email address: hello@example.com Please follow the link
+                inside to continue.
             </p>
-
-            <div class="divider my-4">
-                <div class="divider-text">or</div>
-            </div>
-
-            <div class="d-flex justify-content-center">
-                <a href="javascript:;" class="btn btn-icon btn-label-facebook me-3">
-                    <i class="tf-icons bx bxl-facebook"></i>
-                </a>
-
-                <a href="javascript:;" class="btn btn-icon btn-label-google-plus me-3">
-                    <i class="tf-icons bx bxl-google-plus"></i>
-                </a>
-
-                <a href="javascript:;" class="btn btn-icon btn-label-twitter">
-                    <i class="tf-icons bx bxl-twitter"></i>
-                </a>
+            <a class="btn btn-primary w-100 my-3" href="{{ route('home') }}">
+                Skip for now
+            </a>
+            <div class="d-flex justify-content-center align-items-center">
+                <p class="text-center p-0 m-0">Didn't get the mail?</p>
+                <form action="{{ route('verification.send') }}" method="POST" class="ms-2">
+                    @csrf
+                    <button class="btn btn-primary">
+                        Resend
+                    </button>
+                </form>
             </div>
         </div>
     </div>
-    <!-- /Login -->
+    <!-- / Verify email -->
 </x-auth-layout>
