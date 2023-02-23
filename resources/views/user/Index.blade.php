@@ -20,7 +20,8 @@
         <x-wrapper>
 
             <h4 class="fw-bold py-3 mb-4">
-                <span class="text-muted fw-light">User Profile /</span>
+                <span class="text-muted fw-light">User /</span> 
+                <span id="path">Profile</span>
             </h4>
 
             <x-profile.header :$user></x-profile.header>
@@ -41,5 +42,6 @@
         <script
             src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/js/pages-profile.js">
         </script>
+        @vite(['resources/js/path.js'])
     </x-slot:scripts>
 </x-layout>
