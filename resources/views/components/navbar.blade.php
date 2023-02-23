@@ -439,16 +439,15 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item"
-                            href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/pages/profile-user">
-                            <i class="bx bx-user me-2"></i>
+                        <a class="dropdown-item d-flex" href="{{ route('user.profile', ['user' => auth()->id()]) }}">
+                            <i class="bx bx-user me-2 d-flex justify-content-center align-items-center"></i>
                             <span class="align-middle">My Profile</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item"
+                        <a class="dropdown-item d-flex"
                             href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/invoice/list">
-                            <i class="bx bx-credit-card me-2"></i>
+                            <i class="bx bx-credit-card me-2 d-flex justify-content-center align-items-center"></i>
                             <span class="align-middle">Billing</span>
                         </a>
                     </li>
@@ -456,9 +455,9 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="javascript:void(0)">
-                            <i class="bx bx-log-in me-2"></i>
-                            <span class="align-middle">Login</span>
+                        <a class="dropdown-item d-flex" href="{{ route('logout') }}">
+                            <i class="bx bx-log-out me-2 d-flex justify-content-center align-items-center"></i>
+                            <span class="align-middle">Logout</span>
                         </a>
                     </li>
                 </ul>
