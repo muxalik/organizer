@@ -1,5 +1,5 @@
-<x-profile-layout active="Profile" :$user>
-    <!-- User Profile Content -->
+<!-- User Profile Content -->
+<div class="tab-pane fade show active" id="profile" role="tabpanel">
     <div class="row">
         <div class="col-xl-4 col-lg-5 col-md-5">
             <!-- About User -->
@@ -435,5 +435,5 @@
             <!--/ Projects table -->
         </div>
     </div>
-    <!--/ User Profile Content -->
-</x-profile-layout>
+</div>
+<!--/ User Profile Content -->

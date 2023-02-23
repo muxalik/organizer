@@ -1,5 +1,5 @@
-<x-profile-layout active="Teams" :$user>
-    <!-- Teams Cards -->
+<!-- Teams Cards -->
+<div class="tab-pane fade" id="teams" role="tabpanel">
     <div class="row g-4">
         <div class="col-xl-4 col-lg-6 col-md-6">
             <div class="card">
@@ -80,8 +80,7 @@
                             </ul>
                         </div>
                         <div class="ms-auto">
-                            <a href="javascript:;" class="me-2"><span
-                                    class="badge bg-label-primary">React</span></a>
+                            <a href="javascript:;" class="me-2"><span class="badge bg-label-primary">React</span></a>
                             <a href="javascript:;"><span class="badge bg-label-warning">Vue.JS</span></a>
                         </div>
                     </div>
@@ -689,5 +688,5 @@
             </div>
         </div>
     </div>
-    <!--/ Teams Cards -->
-</x-profile-layout>
+</div>
+<!--/ Teams Cards -->

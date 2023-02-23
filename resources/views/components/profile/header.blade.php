@@ -1,3 +1,5 @@
+@props(['user'])
+
 <!-- Header -->
 <div class="row">
     <div class="col-12">
@@ -29,9 +31,11 @@
                                 </li>
                             </ul>
                         </div>
-                        <a href="javascript:void(0)" class="btn btn-primary text-nowrap">
-                            <i class='bx bx-user-check me-1'></i> Connected
-                        </a>
+                        @if (!auth()->user()->is($user))
+                            <a href="javascript:void(0)" class="btn btn-primary text-nowrap">
+                                <i class='bx bx-user-check me-1'></i> Connected
+                            </a>
+                        @endif
                     </div>
                 </div>
             </div>

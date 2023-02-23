@@ -20,15 +20,20 @@
         <x-wrapper>
 
             <h4 class="fw-bold py-3 mb-4">
-                <span class="text-muted fw-light">User Profile /</span> {{ $active }}
+                <span class="text-muted fw-light">User Profile /</span>
             </h4>
 
-            <x-profile-header></x-profile-header>
+            <x-profile.header :$user></x-profile.header>
 
-            <x-profile-nav :$active :$user></x-profile-nav>
+            <x-profile.nav :$user></x-profile.nav>
 
-            {{ $slot }}
-
+            <div class="tab-content p-0">
+                @include('user.profile')
+                @include('user.teams')
+                @include('user.projects')
+                @include('user.connections')
+            </div>
+            
         </x-wrapper>
 
     </x-slot:content>

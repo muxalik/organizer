@@ -1,5 +1,5 @@
-<x-profile-layout active="Connections" :$user>
-    <!-- Connection Cards -->
+<!-- Connection Cards -->
+<div class="tab-pane fade" id="connections" role="tabpanel">
     <div class="row g-4">
         <div class="col-xl-4 col-lg-6 col-md-6">
             <div class="card">
@@ -298,5 +298,5 @@
             </div>
         </div>
     </div>
-    <!-- / Connection Cards -->
-</x-profile-layout>
+</div>
+<!-- / Connection Cards -->

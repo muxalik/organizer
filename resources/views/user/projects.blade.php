@@ -1,5 +1,5 @@
-<x-profile-layout active="Projects" :$user>
-    <!-- Project Cards -->
+<!-- Project Cards -->
+<div class="tab-pane fade" id="projects" role="tabpanel">
     <div class="row g-4">
         <div class="col-xl-4 col-lg-6 col-md-6">
             <div class="card">
@@ -69,23 +69,23 @@
                     <div class="d-flex align-items-center">
                         <div class="d-flex align-items-center">
                             <ul class="list-unstyled d-flex align-items-center avatar-group mb-0 zindex-2">
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up"
-                                    aria-label="Vinnie Mostowy" data-bs-original-title="Vinnie Mostowy">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up" aria-label="Vinnie Mostowy"
+                                    data-bs-original-title="Vinnie Mostowy">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/5.png"
                                         alt="Avatar">
                                 </li>
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up"
-                                    aria-label="Allen Rieske" data-bs-original-title="Allen Rieske">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up" aria-label="Allen Rieske"
+                                    data-bs-original-title="Allen Rieske">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/12.png"
                                         alt="Avatar">
                                 </li>
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up me-2"
-                                    aria-label="Julee Rossignol" data-bs-original-title="Julee Rossignol">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up me-2" aria-label="Julee Rossignol"
+                                    data-bs-original-title="Julee Rossignol">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/6.png"
                                         alt="Avatar">
@@ -170,23 +170,23 @@
                     <div class="d-flex align-items-center">
                         <div class="d-flex align-items-center">
                             <ul class="list-unstyled d-flex align-items-center avatar-group mb-0 zindex-2">
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up"
-                                    aria-label="Kaith D'souza" data-bs-original-title="Kaith D'souza">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up" aria-label="Kaith D'souza"
+                                    data-bs-original-title="Kaith D'souza">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/15.png"
                                         alt="Avatar">
                                 </li>
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up"
-                                    aria-label="John Doe" data-bs-original-title="John Doe">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up" aria-label="John Doe"
+                                    data-bs-original-title="John Doe">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/1.png"
                                         alt="Avatar">
                                 </li>
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up me-2"
-                                    aria-label="Alan Walker" data-bs-original-title="Alan Walker">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up me-2" aria-label="Alan Walker"
+                                    data-bs-original-title="Alan Walker">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/16.png"
                                         alt="Avatar">
@@ -271,23 +271,23 @@
                     <div class="d-flex align-items-center">
                         <div class="d-flex align-items-center">
                             <ul class="list-unstyled d-flex align-items-center avatar-group mb-0 zindex-2">
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up"
-                                    aria-label="Jimmy Ressula" data-bs-original-title="Jimmy Ressula">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up" aria-label="Jimmy Ressula"
+                                    data-bs-original-title="Jimmy Ressula">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/4.png"
                                         alt="Avatar">
                                 </li>
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up"
-                                    aria-label="Kristi Lawker" data-bs-original-title="Kristi Lawker">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up" aria-label="Kristi Lawker"
+                                    data-bs-original-title="Kristi Lawker">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/2.png"
                                         alt="Avatar">
                                 </li>
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up me-2"
-                                    aria-label="Danny Paul" data-bs-original-title="Danny Paul">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up me-2" aria-label="Danny Paul"
+                                    data-bs-original-title="Danny Paul">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/7.png"
                                         alt="Avatar">
@@ -372,23 +372,23 @@
                     <div class="d-flex align-items-center">
                         <div class="d-flex align-items-center">
                             <ul class="list-unstyled d-flex align-items-center avatar-group mb-0 zindex-2">
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up"
-                                    aria-label="Andrew Tye" data-bs-original-title="Andrew Tye">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up" aria-label="Andrew Tye"
+                                    data-bs-original-title="Andrew Tye">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/6.png"
                                         alt="Avatar">
                                 </li>
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up"
-                                    aria-label="Rishi Swaat" data-bs-original-title="Rishi Swaat">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up" aria-label="Rishi Swaat"
+                                    data-bs-original-title="Rishi Swaat">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/9.png"
                                         alt="Avatar">
                                 </li>
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up me-2"
-                                    aria-label="Rossie Kim" data-bs-original-title="Rossie Kim">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up me-2" aria-label="Rossie Kim"
+                                    data-bs-original-title="Rossie Kim">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/12.png"
                                         alt="Avatar">
@@ -475,23 +475,23 @@
                     <div class="d-flex align-items-center">
                         <div class="d-flex align-items-center">
                             <ul class="list-unstyled d-flex align-items-center avatar-group mb-0 zindex-2">
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up"
-                                    aria-label="Kim Merchent" data-bs-original-title="Kim Merchent">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up" aria-label="Kim Merchent"
+                                    data-bs-original-title="Kim Merchent">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/10.png"
                                         alt="Avatar">
                                 </li>
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up"
-                                    aria-label="Sam D'souza" data-bs-original-title="Sam D'souza">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up" aria-label="Sam D'souza"
+                                    data-bs-original-title="Sam D'souza">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/13.png"
                                         alt="Avatar">
                                 </li>
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up me-2"
-                                    aria-label="Nurvi Karlos" data-bs-original-title="Nurvi Karlos">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up me-2" aria-label="Nurvi Karlos"
+                                    data-bs-original-title="Nurvi Karlos">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/15.png"
                                         alt="Avatar">
@@ -571,29 +571,29 @@
                         <small>100% Completed</small>
                     </div>
                     <div class="progress mb-3" style="height: 8px;">
-                        <div class="progress-bar" role="progressbar" style="width: 100%;"
-                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100"
+                            aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div class="d-flex align-items-center">
                         <div class="d-flex align-items-center">
                             <ul class="list-unstyled d-flex align-items-center avatar-group mb-0 zindex-2">
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up"
-                                    aria-label="Kim Karlos" data-bs-original-title="Kim Karlos">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up" aria-label="Kim Karlos"
+                                    data-bs-original-title="Kim Karlos">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/3.png"
                                         alt="Avatar">
                                 </li>
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up"
-                                    aria-label="Katy Turner" data-bs-original-title="Katy Turner">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up" aria-label="Katy Turner"
+                                    data-bs-original-title="Katy Turner">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/9.png"
                                         alt="Avatar">
                                 </li>
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                    data-bs-placement="top" class="avatar avatar-sm pull-up me-2"
-                                    aria-label="Peter Adward" data-bs-original-title="Peter Adward">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
+                                    class="avatar avatar-sm pull-up me-2" aria-label="Peter Adward"
+                                    data-bs-original-title="Peter Adward">
                                     <img class="rounded-circle"
                                         src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/15.png"
                                         alt="Avatar">
@@ -609,5 +609,5 @@
             </div>
         </div>
     </div>
-    <!--/ Project Cards -->
-</x-profile-layout>
+</div>
+<!--/ Project Cards -->

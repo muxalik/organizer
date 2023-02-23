@@ -24,13 +24,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/email/verify/{id}/{hash}', VerifyEmailController::class)->middleware('signed')->name('verification.verify');
     Route::post('/email/verification-notification', EmailVerificationNotificationController::class)->name('verification.send');
 
-    // User
-    Route::name('user.')->prefix('/id{user}')->group(function () {
-        Route::get('/profile', [UserController::class, 'index'])->name('profile');
-        Route::get('/teams', [UserController::class, 'teams'])->name('teams');
-        Route::get('/projects', [UserController::class, 'projects'])->name('projects');
-        Route::get('/connections', [UserController::class, 'connections'])->name('connections');
-    });
+    Route::get('/id{user}/profile', [UserController::class, 'index'])->name('user.profile');
 });
 
 
