@@ -27,7 +27,7 @@ class LoginRequest extends FormRequest
         return [
             'email-name' => ['required', 'string'],
             'password' => ['required', 'string'],
-            'remember' => [Rule::in(['no', 'off', 0, false, 'yes', 'on', 1, true])],
+            'remember' => ['nullable', Rule::in(['no', 'off', 0, false, 'yes', 'on', 1, true])],
         ];
     }
 }
