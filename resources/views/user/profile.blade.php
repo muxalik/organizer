@@ -417,19 +417,448 @@
             <!-- Projects table -->
             <div class="card mb-4">
                 <div class="card-datatable table-responsive">
-                    <table class="datatables-projects border-top table">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Leader</th>
-                                <th>Team</th>
-                                <th class="w-px-200">Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                    </table>
+                    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                        <div class="card-header pb-0 pt-sm-0">
+                            <div class="head-label text-center">
+                                <h5 class="card-title mb-0">Projects</h5>
+                            </div>
+                            <div class="d-flex justify-content-center justify-content-md-end">
+                                <div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search:<input
+                                            type="search" class="form-control" placeholder=""
+                                            aria-controls="DataTables_Table_0"></label></div>
+                            </div>
+                        </div>
+                        <table class="datatables-projects border-top table dataTable no-footer dtr-column collapsed"
+                            id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info" style="width: 918px;">
+                            <thead>
+                                <tr>
+                                    <th class="control sorting_disabled" rowspan="1" colspan="1"
+                                        style="width: 0px;" aria-label=""></th>
+                                    <th class="sorting_disabled dt-checkboxes-cell dt-checkboxes-select-all"
+                                        rowspan="1" colspan="1" style="width: 18px;" data-col="1"
+                                        aria-label=""><input type="checkbox" class="form-check-input"></th>
+                                    <th class="sorting sorting_desc" tabindex="0"
+                                        aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                                        style="width: 212px;" aria-label="Name: activate to sort column ascending"
+                                        aria-sort="descending">Name</th>
+                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                        rowspan="1" colspan="1" style="width: 81px;"
+                                        aria-label="Leader: activate to sort column ascending">Leader</th>
+                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 75px;"
+                                        aria-label="Team">Team</th>
+                                    <th class="w-px-200 sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                        rowspan="1" colspan="1" style="width: 200px;"
+                                        aria-label="Status: activate to sort column ascending">Status</th>
+                                    <th class="sorting_disabled dtr-hidden" rowspan="1" colspan="1"
+                                        style="width: 78px; display: none;" aria-label="Actions">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd">
+                                    <td class="control" tabindex="0" style=""></td>
+                                    <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                            class="dt-checkboxes form-check-input"></td>
+                                    <td class="sorting_1">
+                                        <div class="d-flex justify-content-left align-items-center">
+                                            <div class="avatar-wrapper">
+                                                <div class="avatar me-2"><span
+                                                        class="avatar-initial rounded-circle bg-label-warning">WS</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column"><span
+                                                    class="text-truncate fw-bold">Website SEO</span><small
+                                                    class="text-truncate text-muted">10 May 2021</small></div>
+                                        </div>
+                                    </td>
+                                    <td>Eileen</td>
+                                    <td>
+                                        <div class="d-flex align-items-center avatar-group">
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/10.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/3.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/2.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/8.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="progress w-100 me-3" style="height: 6px;">
+                                                <div class="progress-bar" style="width: 38%" aria-valuenow="38%"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div><span>38%</span>
+                                        </div>
+                                    </td>
+                                    <td class="dtr-hidden" style="display: none;">
+                                        <div class="d-inline-block"><a href="javascript:;"
+                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
+                                                data-bs-toggle="dropdown"><i
+                                                    class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end m-0"><a href="javascript:;"
+                                                    class="dropdown-item">Details</a><a href="javascript:;"
+                                                    class="dropdown-item">Archive</a>
+                                                <div class="dropdown-divider"></div><a href="javascript:;"
+                                                    class="dropdown-item text-danger delete-record">Delete</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="even">
+                                    <td class="control" tabindex="0" style=""></td>
+                                    <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                            class="dt-checkboxes form-check-input"></td>
+                                    <td class="sorting_1">
+                                        <div class="d-flex justify-content-left align-items-center">
+                                            <div class="avatar-wrapper">
+                                                <div class="avatar me-2"><img
+                                                        src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/icons/brands/social-label.png"
+                                                        alt="Avatar" class="rounded-circle"></div>
+                                            </div>
+                                            <div class="d-flex flex-column"><span class="text-truncate fw-bold">Social
+                                                    Banners</span><small class="text-truncate text-muted">03 Jan
+                                                    2021</small></div>
+                                        </div>
+                                    </td>
+                                    <td>Owen</td>
+                                    <td>
+                                        <div class="d-flex align-items-center avatar-group">
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/11.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/10.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="progress w-100 me-3" style="height: 6px;">
+                                                <div class="progress-bar" style="width: 45%" aria-valuenow="45%"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div><span>45%</span>
+                                        </div>
+                                    </td>
+                                    <td class="dtr-hidden" style="display: none;">
+                                        <div class="d-inline-block"><a href="javascript:;"
+                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
+                                                data-bs-toggle="dropdown"><i
+                                                    class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end m-0"><a href="javascript:;"
+                                                    class="dropdown-item">Details</a><a href="javascript:;"
+                                                    class="dropdown-item">Archive</a>
+                                                <div class="dropdown-divider"></div><a href="javascript:;"
+                                                    class="dropdown-item text-danger delete-record">Delete</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="odd">
+                                    <td class="control" tabindex="0" style=""></td>
+                                    <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                            class="dt-checkboxes form-check-input"></td>
+                                    <td class="sorting_1">
+                                        <div class="d-flex justify-content-left align-items-center">
+                                            <div class="avatar-wrapper">
+                                                <div class="avatar me-2"><img
+                                                        src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/icons/brands/sketch-label.png"
+                                                        alt="Avatar" class="rounded-circle"></div>
+                                            </div>
+                                            <div class="d-flex flex-column"><span class="text-truncate fw-bold">Logo
+                                                    Designs</span><small class="text-truncate text-muted">12 Aug
+                                                    2021</small></div>
+                                        </div>
+                                    </td>
+                                    <td>Keith</td>
+                                    <td>
+                                        <div class="d-flex align-items-center avatar-group">
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/5.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/7.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/12.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/4.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="progress w-100 me-3" style="height: 6px;">
+                                                <div class="progress-bar" style="width: 92%" aria-valuenow="92%"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div><span>92%</span>
+                                        </div>
+                                    </td>
+                                    <td class="dtr-hidden" style="display: none;">
+                                        <div class="d-inline-block"><a href="javascript:;"
+                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
+                                                data-bs-toggle="dropdown"><i
+                                                    class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end m-0"><a href="javascript:;"
+                                                    class="dropdown-item">Details</a><a href="javascript:;"
+                                                    class="dropdown-item">Archive</a>
+                                                <div class="dropdown-divider"></div><a href="javascript:;"
+                                                    class="dropdown-item text-danger delete-record">Delete</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="even">
+                                    <td class="control" tabindex="0" style=""></td>
+                                    <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                            class="dt-checkboxes form-check-input"></td>
+                                    <td class="sorting_1">
+                                        <div class="d-flex justify-content-left align-items-center">
+                                            <div class="avatar-wrapper">
+                                                <div class="avatar me-2"><img
+                                                        src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/icons/brands/sketch-label.png"
+                                                        alt="Avatar" class="rounded-circle"></div>
+                                            </div>
+                                            <div class="d-flex flex-column"><span class="text-truncate fw-bold">IOS
+                                                    App Design</span><small class="text-truncate text-muted">19 Apr
+                                                    2021</small></div>
+                                        </div>
+                                    </td>
+                                    <td>Merline</td>
+                                    <td>
+                                        <div class="d-flex align-items-center avatar-group">
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/2.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/8.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/5.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/1.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="progress w-100 me-3" style="height: 6px;">
+                                                <div class="progress-bar" style="width: 56%" aria-valuenow="56%"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div><span>56%</span>
+                                        </div>
+                                    </td>
+                                    <td class="dtr-hidden" style="display: none;">
+                                        <div class="d-inline-block"><a href="javascript:;"
+                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
+                                                data-bs-toggle="dropdown"><i
+                                                    class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end m-0"><a href="javascript:;"
+                                                    class="dropdown-item">Details</a><a href="javascript:;"
+                                                    class="dropdown-item">Archive</a>
+                                                <div class="dropdown-divider"></div><a href="javascript:;"
+                                                    class="dropdown-item text-danger delete-record">Delete</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="odd">
+                                    <td class="control" tabindex="0" style=""></td>
+                                    <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                            class="dt-checkboxes form-check-input"></td>
+                                    <td class="sorting_1">
+                                        <div class="d-flex justify-content-left align-items-center">
+                                            <div class="avatar-wrapper">
+                                                <div class="avatar me-2"><img
+                                                        src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/icons/brands/figma-label.png"
+                                                        alt="Avatar" class="rounded-circle"></div>
+                                            </div>
+                                            <div class="d-flex flex-column"><span class="text-truncate fw-bold">Figma
+                                                    Dashboards</span><small class="text-truncate text-muted">08 Apr
+                                                    2021</small></div>
+                                        </div>
+                                    </td>
+                                    <td>Harmonia</td>
+                                    <td>
+                                        <div class="d-flex align-items-center avatar-group">
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/9.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/2.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/4.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="progress w-100 me-3" style="height: 6px;">
+                                                <div class="progress-bar" style="width: 25%" aria-valuenow="25%"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div><span>25%</span>
+                                        </div>
+                                    </td>
+                                    <td class="dtr-hidden" style="display: none;">
+                                        <div class="d-inline-block"><a href="javascript:;"
+                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
+                                                data-bs-toggle="dropdown"><i
+                                                    class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end m-0"><a href="javascript:;"
+                                                    class="dropdown-item">Details</a><a href="javascript:;"
+                                                    class="dropdown-item">Archive</a>
+                                                <div class="dropdown-divider"></div><a href="javascript:;"
+                                                    class="dropdown-item text-danger delete-record">Delete</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="even">
+                                    <td class="control" tabindex="0" style=""></td>
+                                    <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                            class="dt-checkboxes form-check-input"></td>
+                                    <td class="sorting_1">
+                                        <div class="d-flex justify-content-left align-items-center">
+                                            <div class="avatar-wrapper">
+                                                <div class="avatar me-2"><img
+                                                        src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/icons/brands/html-label.png"
+                                                        alt="Avatar" class="rounded-circle"></div>
+                                            </div>
+                                            <div class="d-flex flex-column"><span class="text-truncate fw-bold">Crypto
+                                                    Admin</span><small class="text-truncate text-muted">29 Sept
+                                                    2021</small></div>
+                                        </div>
+                                    </td>
+                                    <td>Allyson</td>
+                                    <td>
+                                        <div class="d-flex align-items-center avatar-group">
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/7.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/3.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/7.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/2.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="progress w-100 me-3" style="height: 6px;">
+                                                <div class="progress-bar" style="width: 36%" aria-valuenow="36%"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div><span>36%</span>
+                                        </div>
+                                    </td>
+                                    <td class="dtr-hidden" style="display: none;">
+                                        <div class="d-inline-block"><a href="javascript:;"
+                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
+                                                data-bs-toggle="dropdown"><i
+                                                    class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end m-0"><a href="javascript:;"
+                                                    class="dropdown-item">Details</a><a href="javascript:;"
+                                                    class="dropdown-item">Archive</a>
+                                                <div class="dropdown-divider"></div><a href="javascript:;"
+                                                    class="dropdown-item text-danger delete-record">Delete</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="odd">
+                                    <td class="control" tabindex="0" style=""></td>
+                                    <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                            class="dt-checkboxes form-check-input"></td>
+                                    <td class="sorting_1">
+                                        <div class="d-flex justify-content-left align-items-center">
+                                            <div class="avatar-wrapper">
+                                                <div class="avatar me-2"><img
+                                                        src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/icons/brands/react-label.png"
+                                                        alt="Avatar" class="rounded-circle"></div>
+                                            </div>
+                                            <div class="d-flex flex-column"><span class="text-truncate fw-bold">Create
+                                                    Website</span><small class="text-truncate text-muted">20 Mar
+                                                    2021</small></div>
+                                        </div>
+                                    </td>
+                                    <td>Georgie</td>
+                                    <td>
+                                        <div class="d-flex align-items-center avatar-group">
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/2.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/6.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/5.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                            <div class="avatar avatar-xs"><img
+                                                    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/3.png"
+                                                    alt="Avatar" class="rounded-circle pull-up"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="progress w-100 me-3" style="height: 6px;">
+                                                <div class="progress-bar" style="width: 72%" aria-valuenow="72%"
+                                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div><span>72%</span>
+                                        </div>
+                                    </td>
+                                    <td class="dtr-hidden" style="display: none;">
+                                        <div class="d-inline-block"><a href="javascript:;"
+                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
+                                                data-bs-toggle="dropdown"><i
+                                                    class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end m-0"><a href="javascript:;"
+                                                    class="dropdown-item">Details</a><a href="javascript:;"
+                                                    class="dropdown-item">Archive</a>
+                                                <div class="dropdown-divider"></div><a href="javascript:;"
+                                                    class="dropdown-item text-danger delete-record">Delete</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row mx-2">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
+                                    aria-live="polite">Showing 1 to 7 of 10 entries</div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_paginate paging_simple_numbers"
+                                    id="DataTables_Table_0_paginate">
+                                    <ul class="pagination">
+                                        <li class="paginate_button page-item previous disabled"
+                                            id="DataTables_Table_0_previous"><a href="#"
+                                                aria-controls="DataTables_Table_0" data-dt-idx="previous"
+                                                tabindex="0" class="page-link">Previous</a></li>
+                                        <li class="paginate_button page-item active"><a href="#"
+                                                aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0"
+                                                class="page-link">1</a></li>
+                                        <li class="paginate_button page-item "><a href="#"
+                                                aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0"
+                                                class="page-link">2</a></li>
+                                        <li class="paginate_button page-item next" id="DataTables_Table_0_next"><a
+                                                href="#" aria-controls="DataTables_Table_0" data-dt-idx="next"
+                                                tabindex="0" class="page-link">Next</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--/ Projects table -->
