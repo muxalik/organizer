@@ -1,16 +1,18 @@
-<x-auth-layout title="Organizer - Login">
+<x-auth-layout title="Forgot Password">
     <x-slot:image>
-        <img src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/illustrations/boy-with-rocket-light.png"
-            class="img-fluid" alt="Login image" width="700" data-app-dark-img="illustrations/boy-with-rocket-dark.png"
-            data-app-light-img="illustrations/boy-with-rocket-light.png">
+        <img src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/illustrations/girl-unlock-password-light.png"
+            class="img-fluid" alt="Login image" width="600"
+            data-app-dark-img="illustrations/girl-unlock-password-dark.png"
+            data-app-light-img="illustrations/girl-unlock-password-light.png">
     </x-slot:image>
 
-    <!-- Login -->
+    <!-- Forgot Password -->
     <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg p-sm-5 p-4">
         <div class="w-px-400 mx-auto">
             <!-- Logo -->
             <div class="app-brand mb-5">
-                <a href="" class="app-brand-link gap-2">
+                <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1"
+                    class="app-brand-link gap-2">
                     <span class="app-brand-logo demo"><svg width="25" viewBox="0 0 25 42" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <defs>
@@ -37,114 +39,57 @@
                                             <use fill="#696cff" xlink:href="#path-1"></use>
                                             <g id="Path-3" mask="url(#mask-2)">
                                                 <use fill="#696cff" xlink:href="#path-3"></use>
-                                                <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-3">
-                                                </use>
+                                                <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-3"></use>
                                             </g>
                                             <g id="Path-4" mask="url(#mask-2)">
                                                 <use fill="#696cff" xlink:href="#path-4"></use>
-                                                <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-4">
-                                                </use>
+                                                <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-4"></use>
                                             </g>
                                         </g>
                                         <g id="Triangle"
                                             transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) ">
                                             <use fill="#696cff" xlink:href="#path-5"></use>
-                                            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-5">
-                                            </use>
+                                            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-5"></use>
                                         </g>
                                     </g>
                                 </g>
                             </g>
                         </svg>
                     </span>
-                    <span class="app-brand-text demo text-body fw-bolder">Logging</span>
+                    <span class="app-brand-text demo demo text-body fw-bolder">Request new password</span>
                 </a>
             </div>
             <!-- /Logo -->
-            <h4 class="mb-2">Welcome to Organizer! 👋</h4>
-            <p class="mb-4">Please sign-in to your account and start the adventure</p>
-
-            @error('credentials')
+            <h4 class="mb-2">Forgot Password? 🔒</h4>
+            <p class="mb-4">Enter your email and we'll send you instructions to reset your password</p>
+            @if (session('error'))
                 <div class="alert alert-danger">
-                    <ul class="list-unstyled mb-0">
-                        <li>{{ $message }}</li>
-                    </ul>
+                    <p class="m-0">{{ session('error') }}</p>
                 </div>
-            @enderror
-
-            <form id="formAuthentication" class="mb-3" action="{{ route('login') }}" method="POST">
+            @endif
+            <form id="formAuthentication" class="mb-3 fv-plugins-bootstrap5 fv-plugins-framework"
+                action="{{ route('password.email') }}" method="POST" novalidate="novalidate">
                 @csrf
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email or Username</label>
-                    <input type="text"
-                        class="form-control @error('credentials') is-invalid @enderror @error('email-name') is-invalid @enderror"
-                        id="email" name="email-name" placeholder="Enter your email or username"
-                        value="{{ old('email-name') }}" autofocus>
-                    @error('email-name')
+                <div class="mb-3 fv-plugins-icon-container">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control @error('email') is-invalid @enderror" id="email"
+                        name="email" placeholder="Enter your email" autofocus="">
+                    @error('email')
                         <div class="fv-plugins-message-container invalid-feedback" style="display: block;">
                             <div data-field="password" data-validator="notEmpty">{{ $message }}
                             </div>
                         </div>
                     @enderror
                 </div>
-                <div class="mb-3 form-password-toggle">
-                    <div class="d-flex justify-content-between">
-                        <label class="form-label" for="password">Password</label>
-                        <a href="{{ route('password.request') }}"><small>Forgot Password?</small></a>
-                    </div>
-                    <div class="input-group input-group-merge">
-                        <input type="password" id="password"
-                            class="form-control @error('credentials') is-invalid @enderror @error('password') is-invalid @enderror"
-                            name="password"
-                            placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                            aria-describedby="password" />
-                        <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-                    </div>
-                    @error('password')
-                        <div class="fv-plugins-message-container invalid-feedback" style="display: block;">
-                            <div data-field="password" data-validator="notEmpty">{{ $message }}
-                            </div>
-                        </div>
-                    @enderror
-                </div>
-                <div class="my-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="remember" name="remember">
-                        <label class="form-check-label" for="remember">
-                            Remember Me
-                        </label>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
-                </div>
+                <input type="submit" class="btn btn-primary d-grid w-100" value="Send Reset Link"></input>
             </form>
-
-            <p class="text-center">
-                <span>New on our platform?</span>
-                <a href="{{ route('register.form') }}">
-                    <span>Create an account</span>
-                </a>
-            </p>
-
-            <div class="divider my-4">
-                <div class="divider-text">or</div>
-            </div>
-
-            <div class="d-flex justify-content-center">
-                <a href="javascript:;" class="btn btn-icon btn-label-facebook me-3">
-                    <i class="tf-icons bx bxl-facebook"></i>
-                </a>
-
-                <a href="javascript:;" class="btn btn-icon btn-label-google-plus me-3">
-                    <i class="tf-icons bx bxl-google-plus"></i>
-                </a>
-
-                <a href="javascript:;" class="btn btn-icon btn-label-twitter">
-                    <i class="tf-icons bx bxl-twitter"></i>
+            <div class="text-center">
+                <a href="{{ route('login') }}" class="d-flex align-items-center justify-content-center">
+                    <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
+                    Back to login
                 </a>
             </div>
         </div>
     </div>
-    <!-- /Login -->
+    <!-- / Forgot Password -->
 </x-auth-layout>
