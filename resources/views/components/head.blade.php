@@ -60,6 +60,8 @@
 <script src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/js/config.js">
 </script>
 
+@vite(['resources/css/main.css'])
+
 <!-- Vendor Styles -->
 
 <!-- Page Styles -->

@@ -29,10 +29,10 @@
             <x-profile.nav :$user></x-profile.nav>
 
             <div class="tab-content p-0">
-                @include('user.profile')
-                @include('user.teams')
-                @include('user.projects')
-                @include('user.connections')
+                @include('profile.profile')
+                @include('profile.teams')
+                @include('profile.projects')
+                @include('profile.connections')
             </div>
             
         </x-wrapper>

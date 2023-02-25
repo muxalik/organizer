@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-    public function index(): View
+    public function chat(): View
     {
-        return view('home');
+        return view('chat');
+    }
+
+    public function users(): View
+    {
+        return view('users-index');
     }
 }

@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,8 +34,11 @@ Route::middleware('auth')->group(function () {
     Route::get('email/verify/{id}/{hash}', VerifyEmailController::class)->middleware('signed')->name('verification.verify');
     Route::post('email/verification-notification', EmailVerificationNotificationController::class)->name('verification.send');
 
-    Route::get('id{user}/profile', [UserController::class, 'index'])->name('user.profile');
+    Route::get('id{user}/profile', [ProfileController::class, 'index'])->name('user.profile');
 });
+
+Route::get('/chat', [MainController::class, 'chat'])->name('chat');
+Route::get('/users', [MainController::class, 'users'])->name('users-index');
 
 
 Route::middleware('verified')->group(function () {

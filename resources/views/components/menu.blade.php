@@ -61,33 +61,12 @@
 
     <ul class="menu-inner py-1 ps ps--active-y">
 
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div>Dashboards</div>
+        <li class="menu-item ">
+            <a href="{{ route('home') }}"
+                class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-alt"></i>
+                <div>Home</div>
             </a>
-
-            <ul class="menu-sub">
-                <li class="menu-item ">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1"
-                        class="menu-link">
-                        <div>Analytics</div>
-                    </a>
-                </li>
-                <li class="menu-item ">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/dashboard/crm"
-                        class="menu-link">
-                        <div>CRM</div>
-                    </a>
-                </li>
-                <li class="menu-item ">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/dashboard/ecommerce"
-                        class="menu-link">
-                        <div>eCommerce</div>
-                    </a>
-
-                </li>
-            </ul>
         </li>
 
         <li class="menu-item">
@@ -198,7 +177,7 @@
         </li>
 
         <li class="menu-item ">
-            <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/chat"
+            <a href="{{ route('chat') }}"
                 class="menu-link">
                 <i class="menu-icon tf-icons bx bx-chat"></i>
                 <div>Chat</div>
@@ -221,7 +200,7 @@
         </li>
 
         <li class="menu-item">
-            <a href="" class="menu-link">
+            <a href="{{ route('users-index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-user"></i>
                 <div>User Management</div>
             </a>
