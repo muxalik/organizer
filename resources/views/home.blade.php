@@ -3,7 +3,7 @@
         <x-default-head></x-default-head>
     </x-slot:head>
     <x-slot:content>
-        <x-wrapper>
+        <x-wrapper page="Home">
             content here!
         </x-wrapper>
     </x-slot:content>

@@ -1,3 +1,4 @@
+@props(['page'])
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" data-bg-class="bg-menu-theme"
     style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
 
@@ -61,7 +62,7 @@
 
     <ul class="menu-inner py-1 ps ps--active-y">
 
-        <li class="menu-item ">
+        <li class="menu-item @if($page == 'Home') active @endif">
             <a href="{{ route('home') }}"
                 class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-alt"></i>
@@ -176,7 +177,7 @@
             </a>
         </li>
 
-        <li class="menu-item ">
+        <li class="menu-item @if($page == 'Chat') active @endif">
             <a href="{{ route('chat') }}"
                 class="menu-link">
                 <i class="menu-icon tf-icons bx bx-chat"></i>
@@ -199,7 +200,7 @@
             </a>
         </li>
 
-        <li class="menu-item">
+        <li class="menu-item @if($page == 'Users') active @endif">
             <a href="{{ route('users-index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-user"></i>
                 <div>User Management</div>

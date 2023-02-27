@@ -6,6 +6,11 @@ use Illuminate\Contracts\View\View;
 
 class MainController extends Controller
 {
+    public function index(): View
+    {
+        return view('home');
+    }
+
     public function chat(): View
     {
         return view('chat');

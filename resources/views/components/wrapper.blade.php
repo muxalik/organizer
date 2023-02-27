@@ -1,6 +1,7 @@
+@props(['page'])
 <div class="layout-wrapper layout-content-navbar">
     <div class="layout-container">
-        <x-menu></x-menu>
+        <x-menu :$page></x-menu>
         <div class="layout-page">
             <x-navbar></x-navbar>
             <div class="content-wrapper">

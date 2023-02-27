@@ -5,7 +5,7 @@
             href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/css/pages/app-chat.css" />
     </x-slot:head>
     <x-slot:content>
-        <x-wrapper>
+        <x-wrapper page="Chat">
             <div class="app-chat overflow-hidden card">
                 <div class="row g-0">
                     <!-- Chat & Contacts -->
