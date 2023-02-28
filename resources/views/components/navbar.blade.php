@@ -418,7 +418,7 @@
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
                         <a class="dropdown-item"
-                            href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/pages/profile-user">
+                            href="{{ route('user.profile', ['user' => auth()->id()]) }}">
                             <div class="d-flex">
                                 <div class="flex-shrink-0 me-3">
                                     <div class="avatar avatar-online">
@@ -428,9 +428,9 @@
                                 </div>
                                 <div class="flex-grow-1">
                                     <span class="fw-semibold d-block">
-                                        John Doe
+                                        {{ auth()->user()->name }}
                                     </span>
-                                    <small class="text-muted">Admin</small>
+                                    <small class="text-muted">Role</small>
                                 </div>
                             </div>
                         </a>
@@ -446,9 +446,9 @@
                     </li>
                     <li>
                         <a class="dropdown-item d-flex"
-                            href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/invoice/list">
-                            <i class="bx bx-credit-card me-2 d-flex justify-content-center align-items-center"></i>
-                            <span class="align-middle">Billing</span>
+                            href="">
+                            <i class="bx bx-message-square-edit me-2 d-flex justify-content-center align-items-center"></i>
+                            <span class="align-middle">Edit Profile</span>
                         </a>
                     </li>
                     <li>

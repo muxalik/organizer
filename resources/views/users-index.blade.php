@@ -12,7 +12,7 @@
                                 <div class="content-left">
                                     <span>Users</span>
                                     <div class="d-flex align-items-end mt-2">
-                                        <h3 class="mb-0 me-2">11</h3>
+                                        <h3 class="mb-0 me-2">{{ $users_count }}</h3>
                                         <small class="text-success">(100%)</small>
                                     </div>
                                     <small>Total Users</small>
@@ -31,7 +31,7 @@
                                 <div class="content-left">
                                     <span>Verified Users</span>
                                     <div class="d-flex align-items-end mt-2">
-                                        <h3 class="mb-0 me-2">5</h3>
+                                        <h3 class="mb-0 me-2">{{ $verified_users_count }}</h3>
                                         <small class="text-success">(+95%)</small>
                                     </div>
                                     <small>Recent analytics </small>
@@ -69,7 +69,7 @@
                                 <div class="content-left">
                                     <span>Verification Pending</span>
                                     <div class="d-flex align-items-end mt-2">
-                                        <h3 class="mb-0 me-2">6</h3>
+                                        <h3 class="mb-0 me-2">{{ $users_count - $verified_users_count }}</h3>
                                         <small class="text-danger">(+6%)</small>
                                     </div>
                                     <small>Recent analytics</small>
@@ -128,8 +128,8 @@
                                     <th class="sorting sorting_desc" tabindex="0" aria-controls="DataTables_Table_0"
                                         rowspan="1" colspan="1" style="width: 428px;" aria-sort="descending"
                                         aria-label="User: activate to sort column ascending">User</th>
-                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
-                                        rowspan="1" colspan="1" style="width: 401px;"
+                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                        colspan="1" style="width: 401px;"
                                         aria-label="Email: activate to sort column ascending">Email</th>
                                     <th class="text-center sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                         rowspan="1" colspan="1" style="width: 131px;"
@@ -139,361 +139,46 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="odd">
-                                    <td class="  control" tabindex="0" style="display: none;"></td>
-                                    <td><span>1</span></td>
-                                    <td class="sorting_1">
-                                        <div class="d-flex justify-content-start align-items-center user-name">
-                                            <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-3"><span
-                                                        class="avatar-initial rounded-circle bg-label-primary">JD</span>
+                                @forelse ($users as $user)
+                                    <tr>
+                                        <td><span>{{ $user->id }}</span></td>
+                                        <td class="sorting_1">
+                                            <div class="d-flex justify-content-start align-items-center user-name">
+                                                <div class="avatar-wrapper">
+                                                    <div class="avatar avatar-sm me-3"><span
+                                                            class="avatar-initial rounded-circle bg-label-primary">JD</span>
+                                                    </div>
                                                 </div>
+                                                <div class="d-flex flex-column"><a
+                                                        href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
+                                                        class="text-body text-truncate"><span
+                                                            class="fw-semibold">{{ $user->name }}</span></a></div>
                                             </div>
-                                            <div class="d-flex flex-column"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="text-body text-truncate"><span class="fw-semibold">John
-                                                        Doe</span></a></div>
-                                        </div>
-                                    </td>
-                                    <td><span class="user-email">johndoe@user.com</span></td>
-                                    <td class="  text-center"><i class="bx fs-4 bx-shield-x text-danger"></i></td>
-                                    <td>
-                                        <div class="d-inline-block text-nowrap"><button
-                                                class="btn btn-sm btn-icon edit-record" data-id="95"
-                                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser"><i
-                                                    class="bx bx-edit"></i></button><button
-                                                class="btn btn-sm btn-icon delete-record" data-id="95"><i
-                                                    class="bx bx-trash"></i></button><button
-                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
-                                                data-bs-toggle="dropdown"><i
-                                                    class="bx bx-dots-vertical-rounded"></i></button>
-                                            <div class="dropdown-menu dropdown-menu-end m-0"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="dropdown-item">View</a><a href="javascript:;"
-                                                    class="dropdown-item">Suspend</a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="even">
-                                    <td class="  control" tabindex="0" style="display: none;"></td>
-                                    <td><span>2</span></td>
-                                    <td class="sorting_1">
-                                        <div class="d-flex justify-content-start align-items-center user-name">
-                                            <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-3"><span
-                                                        class="avatar-initial rounded-circle bg-label-success">G</span>
-                                                </div>
+                                        </td>
+                                        <td><span class="user-email">{{ $user->email }}</span></td>
+                                        <td class="text-center"><i
+                                                class="bx fs-4 bx-shield-x @if ($user->email_verified_at) text-success @else text-danger @endif"></i>
+                                        </td>
+                                        <td>
+                                            <div class="d-inline-block text-nowrap"><button
+                                                    class="btn btn-sm btn-icon edit-record" data-id="95"
+                                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser"><i
+                                                        class="bx bx-edit"></i></button><button
+                                                    class="btn btn-sm btn-icon delete-record" data-id="95"><i
+                                                        class="bx bx-trash"></i></button><button
+                                                    class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
+                                                    data-bs-toggle="dropdown"><i
+                                                        class="bx bx-dots-vertical-rounded"></i></button>
+                                                <div class="dropdown-menu dropdown-menu-end m-0"><a
+                                                        href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
+                                                        class="dropdown-item">View</a><a href="javascript:;"
+                                                        class="dropdown-item">Suspend</a></div>
                                             </div>
-                                            <div class="d-flex flex-column"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="text-body text-truncate"><span
-                                                        class="fw-semibold">Guest</span></a></div>
-                                        </div>
-                                    </td>
-                                    <td><span class="user-email">guest@guest.com</span></td>
-                                    <td class="  text-center"><i class="bx fs-4 bx-shield-x text-danger"></i></td>
-                                    <td>
-                                        <div class="d-inline-block text-nowrap"><button
-                                                class="btn btn-sm btn-icon edit-record" data-id="94"
-                                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser"><i
-                                                    class="bx bx-edit"></i></button><button
-                                                class="btn btn-sm btn-icon delete-record" data-id="94"><i
-                                                    class="bx bx-trash"></i></button><button
-                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
-                                                data-bs-toggle="dropdown"><i
-                                                    class="bx bx-dots-vertical-rounded"></i></button>
-                                            <div class="dropdown-menu dropdown-menu-end m-0"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="dropdown-item">View</a><a href="javascript:;"
-                                                    class="dropdown-item">Suspend</a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="odd">
-                                    <td class="  control" tabindex="0" style="display: none;"></td>
-                                    <td><span>3</span></td>
-                                    <td class="sorting_1">
-                                        <div class="d-flex justify-content-start align-items-center user-name">
-                                            <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-3"><span
-                                                        class="avatar-initial rounded-circle bg-label-primary">DS</span>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="text-body text-truncate"><span class="fw-semibold">Dr.
-                                                        Jerrell Schoen</span></a></div>
-                                        </div>
-                                    </td>
-                                    <td><span class="user-email">jensen63@example.com</span></td>
-                                    <td class="  text-center"><i class="bx fs-4 bx-check-shield text-success"></i>
-                                    </td>
-                                    <td>
-                                        <div class="d-inline-block text-nowrap"><button
-                                                class="btn btn-sm btn-icon edit-record" data-id="8"
-                                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser"><i
-                                                    class="bx bx-edit"></i></button><button
-                                                class="btn btn-sm btn-icon delete-record" data-id="8"><i
-                                                    class="bx bx-trash"></i></button><button
-                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
-                                                data-bs-toggle="dropdown"><i
-                                                    class="bx bx-dots-vertical-rounded"></i></button>
-                                            <div class="dropdown-menu dropdown-menu-end m-0"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="dropdown-item">View</a><a href="javascript:;"
-                                                    class="dropdown-item">Suspend</a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="even">
-                                    <td class="  control" tabindex="0" style="display: none;"></td>
-                                    <td><span>4</span></td>
-                                    <td class="sorting_1">
-                                        <div class="d-flex justify-content-start align-items-center user-name">
-                                            <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-3"><span
-                                                        class="avatar-initial rounded-circle bg-label-info">AA</span>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="text-body text-truncate"><span class="fw-semibold">Arnaldo
-                                                        Francisco Agostinho</span></a></div>
-                                        </div>
-                                    </td>
-                                    <td><span class="user-email">arnaldofrancisco2014@gmail.com</span></td>
-                                    <td class="  text-center"><i class="bx fs-4 bx-shield-x text-danger"></i></td>
-                                    <td>
-                                        <div class="d-inline-block text-nowrap"><button
-                                                class="btn btn-sm btn-icon edit-record" data-id="75"
-                                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser"><i
-                                                    class="bx bx-edit"></i></button><button
-                                                class="btn btn-sm btn-icon delete-record" data-id="75"><i
-                                                    class="bx bx-trash"></i></button><button
-                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
-                                                data-bs-toggle="dropdown"><i
-                                                    class="bx bx-dots-vertical-rounded"></i></button>
-                                            <div class="dropdown-menu dropdown-menu-end m-0"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="dropdown-item">View</a><a href="javascript:;"
-                                                    class="dropdown-item">Suspend</a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="odd">
-                                    <td class="  control" tabindex="0" style="display: none;"></td>
-                                    <td><span>5</span></td>
-                                    <td class="sorting_1">
-                                        <div class="d-flex justify-content-start align-items-center user-name">
-                                            <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-3"><span
-                                                        class="avatar-initial rounded-circle bg-label-primary">AP</span>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="text-body text-truncate"><span class="fw-semibold">Antwan
-                                                        Purdy</span></a></div>
-                                        </div>
-                                    </td>
-                                    <td><span class="user-email">oma.koch@example.net</span></td>
-                                    <td class="  text-center"><i class="bx fs-4 bx-check-shield text-success"></i>
-                                    </td>
-                                    <td>
-                                        <div class="d-inline-block text-nowrap"><button
-                                                class="btn btn-sm btn-icon edit-record" data-id="14"
-                                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser"><i
-                                                    class="bx bx-edit"></i></button><button
-                                                class="btn btn-sm btn-icon delete-record" data-id="14"><i
-                                                    class="bx bx-trash"></i></button><button
-                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
-                                                data-bs-toggle="dropdown"><i
-                                                    class="bx bx-dots-vertical-rounded"></i></button>
-                                            <div class="dropdown-menu dropdown-menu-end m-0"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="dropdown-item">View</a><a href="javascript:;"
-                                                    class="dropdown-item">Suspend</a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="even">
-                                    <td class="  control" tabindex="0" style="display: none;"></td>
-                                    <td><span>6</span></td>
-                                    <td class="sorting_1">
-                                        <div class="d-flex justify-content-start align-items-center user-name">
-                                            <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-3"><span
-                                                        class="avatar-initial rounded-circle bg-label-success">AC</span>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="text-body text-truncate"><span class="fw-semibold">Alda
-                                                        Carroll</span></a></div>
-                                        </div>
-                                    </td>
-                                    <td><span class="user-email">hudson.louvenia@example.com</span></td>
-                                    <td class="  text-center"><i class="bx fs-4 bx-check-shield text-success"></i>
-                                    </td>
-                                    <td>
-                                        <div class="d-inline-block text-nowrap"><button
-                                                class="btn btn-sm btn-icon edit-record" data-id="29"
-                                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser"><i
-                                                    class="bx bx-edit"></i></button><button
-                                                class="btn btn-sm btn-icon delete-record" data-id="29"><i
-                                                    class="bx bx-trash"></i></button><button
-                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
-                                                data-bs-toggle="dropdown"><i
-                                                    class="bx bx-dots-vertical-rounded"></i></button>
-                                            <div class="dropdown-menu dropdown-menu-end m-0"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="dropdown-item">View</a><a href="javascript:;"
-                                                    class="dropdown-item">Suspend</a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="odd">
-                                    <td class="  control" tabindex="0" style="display: none;"></td>
-                                    <td><span>7</span></td>
-                                    <td class="sorting_1">
-                                        <div class="d-flex justify-content-start align-items-center user-name">
-                                            <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-3"><span
-                                                        class="avatar-initial rounded-circle bg-label-info">AP</span>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="text-body text-truncate"><span class="fw-semibold">Adrian
-                                                        Padberg</span></a></div>
-                                        </div>
-                                    </td>
-                                    <td><span class="user-email">shields.cristobal@example.net</span></td>
-                                    <td class="  text-center"><i class="bx fs-4 bx-check-shield text-success"></i>
-                                    </td>
-                                    <td>
-                                        <div class="d-inline-block text-nowrap"><button
-                                                class="btn btn-sm btn-icon edit-record" data-id="27"
-                                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser"><i
-                                                    class="bx bx-edit"></i></button><button
-                                                class="btn btn-sm btn-icon delete-record" data-id="27"><i
-                                                    class="bx bx-trash"></i></button><button
-                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
-                                                data-bs-toggle="dropdown"><i
-                                                    class="bx bx-dots-vertical-rounded"></i></button>
-                                            <div class="dropdown-menu dropdown-menu-end m-0"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="dropdown-item">View</a><a href="javascript:;"
-                                                    class="dropdown-item">Suspend</a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="even">
-                                    <td class="  control" tabindex="0" style="display: none;"></td>
-                                    <td><span>8</span></td>
-                                    <td class="sorting_1">
-                                        <div class="d-flex justify-content-start align-items-center user-name">
-                                            <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-3"><span
-                                                        class="avatar-initial rounded-circle bg-label-primary">A</span>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="text-body text-truncate"><span
-                                                        class="fw-semibold">Admin</span></a></div>
-                                        </div>
-                                    </td>
-                                    <td><span class="user-email">kprimesoft@gmail.com</span></td>
-                                    <td class="  text-center"><i class="bx fs-4 bx-shield-x text-danger"></i></td>
-                                    <td>
-                                        <div class="d-inline-block text-nowrap"><button
-                                                class="btn btn-sm btn-icon edit-record" data-id="70"
-                                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser"><i
-                                                    class="bx bx-edit"></i></button><button
-                                                class="btn btn-sm btn-icon delete-record" data-id="70"><i
-                                                    class="bx bx-trash"></i></button><button
-                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
-                                                data-bs-toggle="dropdown"><i
-                                                    class="bx bx-dots-vertical-rounded"></i></button>
-                                            <div class="dropdown-menu dropdown-menu-end m-0"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="dropdown-item">View</a><a href="javascript:;"
-                                                    class="dropdown-item">Suspend</a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="odd">
-                                    <td class="  control" tabindex="0" style="display: none;"></td>
-                                    <td><span>9</span></td>
-                                    <td class="sorting_1">
-                                        <div class="d-flex justify-content-start align-items-center user-name">
-                                            <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-3"><span
-                                                        class="avatar-initial rounded-circle bg-label-info">A</span>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="text-body text-truncate"><span
-                                                        class="fw-semibold">Admin</span></a></div>
-                                        </div>
-                                    </td>
-                                    <td><span class="user-email">admin@admin.com</span></td>
-                                    <td class="  text-center"><i class="bx fs-4 bx-shield-x text-danger"></i></td>
-                                    <td>
-                                        <div class="d-inline-block text-nowrap"><button
-                                                class="btn btn-sm btn-icon edit-record" data-id="78"
-                                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser"><i
-                                                    class="bx bx-edit"></i></button><button
-                                                class="btn btn-sm btn-icon delete-record" data-id="78"><i
-                                                    class="bx bx-trash"></i></button><button
-                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
-                                                data-bs-toggle="dropdown"><i
-                                                    class="bx bx-dots-vertical-rounded"></i></button>
-                                            <div class="dropdown-menu dropdown-menu-end m-0"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="dropdown-item">View</a><a href="javascript:;"
-                                                    class="dropdown-item">Suspend</a></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="even">
-                                    <td class="  control" tabindex="0" style="display: none;"></td>
-                                    <td><span>10</span></td>
-                                    <td class="sorting_1">
-                                        <div class="d-flex justify-content-start align-items-center user-name">
-                                            <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-3"><span
-                                                        class="avatar-initial rounded-circle bg-label-success">AB</span>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex flex-column"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="text-body text-truncate"><span class="fw-semibold">Abraham
-                                                        Bernhard</span></a></div>
-                                        </div>
-                                    </td>
-                                    <td><span class="user-email">trinity33@example.net</span></td>
-                                    <td class="  text-center"><i class="bx fs-4 bx-check-shield text-success"></i>
-                                    </td>
-                                    <td>
-                                        <div class="d-inline-block text-nowrap"><button
-                                                class="btn btn-sm btn-icon edit-record" data-id="16"
-                                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasAddUser"><i
-                                                    class="bx bx-edit"></i></button><button
-                                                class="btn btn-sm btn-icon delete-record" data-id="16"><i
-                                                    class="bx bx-trash"></i></button><button
-                                                class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
-                                                data-bs-toggle="dropdown"><i
-                                                    class="bx bx-dots-vertical-rounded"></i></button>
-                                            <div class="dropdown-menu dropdown-menu-end m-0"><a
-                                                    href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/user/view/account"
-                                                    class="dropdown-item">View</a><a href="javascript:;"
-                                                    class="dropdown-item">Suspend</a></div>
-                                        </div>
-                                    </td>
-                                </tr>
+                                        </td>
+                                    </tr>
+                                @empty
+                                    No users yet...
+                                @endforelse
                             </tbody>
                         </table>
                         <div class="row mx-2">
@@ -506,19 +191,20 @@
                                     id="DataTables_Table_0_paginate">
                                     <ul class="pagination">
                                         <li class="paginate_button page-item previous disabled"
-                                            id="DataTables_Table_0_previous"><a href="#"
+                                            id="DataTables_Table_0_previous"><a href=""
                                                 aria-controls="DataTables_Table_0" data-dt-idx="previous"
                                                 tabindex="0" class="page-link">Previous</a></li>
-                                        <li class="paginate_button page-item active"><a href="#"
+                                        <li class="paginate_button page-item active"><a href=""
                                                 aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0"
                                                 class="page-link">1</a></li>
-                                        <li class="paginate_button page-item "><a href="#"
+                                        <li class="paginate_button page-item "><a href=""
                                                 aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0"
                                                 class="page-link">2</a></li>
                                         <li class="paginate_button page-item next" id="DataTables_Table_0_next"><a
-                                                href="#" aria-controls="DataTables_Table_0" data-dt-idx="next"
+                                                href="" aria-controls="DataTables_Table_0" data-dt-idx="next"
                                                 tabindex="0" class="page-link">Next</a></li>
                                     </ul>
+                                    {{ $users->onEachSide(2)->links() }}
                                 </div>
                             </div>
                         </div>

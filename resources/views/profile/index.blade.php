@@ -17,7 +17,7 @@
     </x-slot:head>
     <x-slot:content>
 
-        <x-wrapper>
+        <x-wrapper page="Profile">
 
             <h4 class="fw-bold py-3 mb-4">
                 <span class="text-muted fw-light">User /</span> 

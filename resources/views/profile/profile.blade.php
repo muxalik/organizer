@@ -8,28 +8,30 @@
                     <small class="text-muted text-uppercase">About</small>
                     <ul class="list-unstyled mb-4 mt-3">
                         <li class="d-flex align-items-center mb-3"><i class="bx bx-user"></i><span
-                                class="fw-semibold mx-2">Full
-                                Name:</span> <span>John Doe</span></li>
+                                class="fw-semibold mx-2">Full Name:</span> <span>{{ $user->name }}</span></li>
                         <li class="d-flex align-items-center mb-3"><i class="bx bx-check"></i><span
-                                class="fw-semibold mx-2">Status:</span> <span>Active</span></li>
+                                class="fw-semibold mx-2">Status:</span>
+                            <span>
+                                {{ $user->is_active ? 'Active' : 'Inactive' }}
+                            </span>
+                        </li>
                         <li class="d-flex align-items-center mb-3"><i class="bx bx-star"></i><span
-                                class="fw-semibold mx-2">Role:</span> <span>Developer</span></li>
+                                class="fw-semibold mx-2">Role:</span> <span></span></li>
                         <li class="d-flex align-items-center mb-3"><i class="bx bx-flag"></i><span
-                                class="fw-semibold mx-2">Country:</span> <span>USA</span></li>
+                                class="fw-semibold mx-2">Country:</span> <span>{{ $user->country }}</span></li>
                         <li class="d-flex align-items-center mb-3"><i class="bx bx-detail"></i><span
-                                class="fw-semibold mx-2">Languages:</span> <span>English</span>
+                                class="fw-semibold mx-2">Languages:</span> <span>{{ $user->languages }}</span>
                         </li>
                     </ul>
                     <small class="text-muted text-uppercase">Contacts</small>
                     <ul class="list-unstyled mb-4 mt-3">
                         <li class="d-flex align-items-center mb-3"><i class="bx bx-phone"></i><span
-                                class="fw-semibold mx-2">Contact:</span> <span>(123)
-                                456-7890</span></li>
+                                class="fw-semibold mx-2">Contact:</span> <span>{{ $user->phone }}</span></li>
                         <li class="d-flex align-items-center mb-3"><i class="bx bx-chat"></i><span
-                                class="fw-semibold mx-2">Skype:</span> <span>john.doe</span></li>
+                                class="fw-semibold mx-2">Discord:</span> <span>{{ $user->discord }}</span></li>
                         <li class="d-flex align-items-center mb-3"><i class="bx bx-envelope"></i><span
                                 class="fw-semibold mx-2">Email:</span>
-                            <span>john.doe@example.com</span>
+                            <span>{{ $user->email }}</span>
                         </li>
                     </ul>
                     <small class="text-muted text-uppercase">Teams</small>
@@ -53,13 +55,13 @@
                     <ul class="list-unstyled mt-3 mb-0">
                         <li class="d-flex align-items-center mb-3"><i class="bx bx-check"></i><span
                                 class="fw-semibold mx-2">Task
-                                Compiled:</span> <span>13.5k</span></li>
+                                Compiled:</span> <span>{{ $user->tasks_done }}</span></li>
                         <li class="d-flex align-items-center mb-3"><i class='bx bx-customize'></i><span
                                 class="fw-semibold mx-2">Projects Compiled:</span>
-                            <span>146</span>
+                            <span>{{ $user->projects_done }}</span>
                         </li>
                         <li class="d-flex align-items-center"><i class="bx bx-user"></i><span
-                                class="fw-semibold mx-2">Connections:</span> <span>897</span></li>
+                                class="fw-semibold mx-2">Connections:</span> <span></span></li>
                     </ul>
                 </div>
             </div>
