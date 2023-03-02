@@ -1,6 +1,7 @@
-@vite('resources/js/search.js')
 <!-- Include Scripts -->
 <!-- BEGIN: Vendor JS-->
+{{-- <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script> --}}
+@vite('resources/js/search.js')
 <script
     src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/jquery/jquery.js?id=08d304be7f95879ae643fabf15fb255a">
 </script>
@@ -26,6 +27,18 @@
     src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/js/menu.js?id=03d9787739b295480194ce0a121ae550">
 </script>
 <script
+    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/cleavejs/cleave.js">
+</script>
+<script
+    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/cleavejs/cleave-phone.js">
+</script>
+<script
+    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/select2/select2.js">
+</script>
+<script
+    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/bs-stepper/bs-stepper.js">
+</script>
+<script
     src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js">
 </script>
 <script
@@ -33,6 +46,11 @@
 </script>
 <script
     src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js">
+</script>
+<!-- END: Page Vendor JS-->
+<!-- BEGIN: Theme JS-->
+<script
+    src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/js/main.js?id=e0aeed34a47c1efb009b120245cce82e">
 </script>
 <!-- END: Page Vendor JS-->
 <!-- BEGIN: Theme JS-->
