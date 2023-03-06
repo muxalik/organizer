@@ -17,19 +17,13 @@ class LoginController extends Controller
 
     public function login(LoginRequest $request): RedirectResponse
     {
-        $value = $request['email-name'];
-        $field = filter_var($value, FILTER_VALIDATE_EMAIL) ? 'email' : 'name';
-
-        if (Auth::attempt([
-            $field => $value,
-            'password' => $request->get('password'),
-        ], $request->boolean('remember'))) {
+        if (Auth::attempt($request->validated(), $request->boolean('remember'))) {
             return redirect()
                 ->intended(route('home'))
                 ->with('success', __('messages.login'));
         }
 
-        return back()->onlyInput('email-name', $value)
+        return back()->onlyInput('email-name', $request->email ?? $request->name)
             ->withErrors(['credentials' => __('messages.credentials')]);
     }
 

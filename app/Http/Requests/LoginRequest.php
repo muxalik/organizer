@@ -30,4 +30,12 @@ class LoginRequest extends FormRequest
             'remember' => ['nullable', Rule::in(['no', 'off', 0, false, 'yes', 'on', 1, true])],
         ];
     }
+
+    public function validated($key = null, $default = null)
+    {
+        $value = request()->get('email-name');
+        $field = filter_var($value, FILTER_VALIDATE_EMAIL) ? 'email' : 'name';
+
+        return array_merge([$field => $value], request()->only('password'));
+    }
 }
