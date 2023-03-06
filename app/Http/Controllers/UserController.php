@@ -4,20 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\Request;
 
-class MainController extends Controller
+class UserController extends Controller
 {
     public function index(): View
-    {
-        return view('home');
-    }
-
-    public function chat(): View
-    {
-        return view('chat');
-    }
-
-    public function users(): View
     {
         $users = User::paginate(10);
         $users_count = User::count();
@@ -27,6 +18,6 @@ class MainController extends Controller
         });
         $verified_users_count = $verified_users->count();
 
-        return view('users-index', compact('users', 'users_count', 'verified_users', 'verified_users_count'));
+        return view('users', compact('users', 'users_count', 'verified_users', 'verified_users_count'));
     }
 }

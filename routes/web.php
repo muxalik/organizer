@@ -6,9 +6,11 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -37,10 +39,10 @@ Route::middleware('auth')->group(function () {
     Route::get('id{user}/profile', [ProfileController::class, 'index'])->name('user.profile');
     
     Route::get('/email', [EmailController::class, 'index'])->name('email');
-    Route::get('/chat', [MainController::class, 'chat'])->name('chat');
-    Route::get('/calendar', [MainController::class, 'calendar'])->name('calendar');
-    Route::get('/kanban', [MainController::class, 'kanban'])->name('kanban');
-    Route::get('/users', [MainController::class, 'users'])->name('users-index');
+    Route::get('/chat', [ChatController::class, 'index'])->name('chat');
+    Route::get('/calendar', [MainController::class, 'index'])->name('calendar');
+    Route::get('/kanban', [MainController::class, 'index'])->name('kanban');
+    Route::get('/users', [UserController::class, 'users'])->name('users');
 });
 
 Route::get('/support', [MainController::class, 'support'])->name('support');

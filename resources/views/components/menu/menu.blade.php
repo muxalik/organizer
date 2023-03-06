@@ -144,7 +144,7 @@
         <x-menu.link :href="route('chat')" title="Chat" icon="bx-chat" />
         <x-menu.link :href="route('calendar')" title="Calendar" icon="bx-calendar" />
         <x-menu.link :href="route('kanban')" title="Kanban" icon="bx-grid" />
-        <x-menu.link :href="route('users-index')" title="Users" icon="bx-user" />
+        <x-menu.link :href="route('users')" title="User Management" icon="bx-user" />
         
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Help</span>
