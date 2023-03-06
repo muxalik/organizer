@@ -6,9 +6,9 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -28,18 +28,22 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/', [MainController::class, 'index'])->name('home');
+    Route::get('/home', [MainController::class, 'index'])->name('home');
     Route::get('logout', [LoginController::class, 'logout'])->name('logout');
     Route::get('email/verify', EmailVerificationPromptController::class)->name('verification.notice');
     Route::get('email/verify/{id}/{hash}', VerifyEmailController::class)->middleware('signed')->name('verification.verify');
     Route::post('email/verification-notification', EmailVerificationNotificationController::class)->name('verification.send');
 
     Route::get('id{user}/profile', [ProfileController::class, 'index'])->name('user.profile');
+    
+    Route::get('/email', [EmailController::class, 'index'])->name('email');
+    Route::get('/chat', [MainController::class, 'chat'])->name('chat');
+    Route::get('/calendar', [MainController::class, 'calendar'])->name('calendar');
+    Route::get('/kanban', [MainController::class, 'kanban'])->name('kanban');
+    Route::get('/users', [MainController::class, 'users'])->name('users-index');
 });
 
-Route::get('/chat', [MainController::class, 'chat'])->name('chat');
-Route::get('/users', [MainController::class, 'users'])->name('users-index');
-
+Route::get('/support', [MainController::class, 'support'])->name('support');
 
 Route::middleware('verified')->group(function () {
 });

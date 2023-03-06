@@ -1,4 +1,4 @@
-<footer class="content-footer footer bg-footer-theme">
+<footer class="content-footer footer bg-footer-theme" style="box-shadow: 0 0 0.375rem 0.25rem rgb(161 172 184 / 15%);">
     <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
         <div class="mb-2 mb-md-0">
             ©{{ date('Y') }}, made with ❤️ by <a href="https://github.com/muxalik" target="_blank"

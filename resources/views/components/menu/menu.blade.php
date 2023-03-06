@@ -62,23 +62,12 @@
 
     <ul class="menu-inner py-1 ps ps--active-y">
 
-        <li class="menu-item @if($page == 'Home') active @endif">
-            <a href="{{ route('home') }}"
-                class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-alt"></i>
-                <div>Home</div>
-            </a>
-        </li>
+        <x-menu.link :href="route('home')" title="Home" icon="bx-home-circle" />
 
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div>Layouts</div>
-            </a>
-
+        <x-menu.link href="" title="Layouts" active="layouts" :toogle="true" icon="bx-grid">
             <ul class="menu-sub">
 
-                <li class="menu-item ">
+                <li class="menu-item">
                     <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/layouts/collapsed-menu"
                         class="menu-link">
                         <div>Collapsed menu</div>
@@ -86,7 +75,7 @@
 
                 </li>
 
-                <li class="menu-item ">
+                <li class="menu-item">
                     <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/layouts/content-navbar"
                         class="menu-link">
                         <div>Content navbar</div>
@@ -95,7 +84,7 @@
 
                 </li>
 
-                <li class="menu-item ">
+                <li class="menu-item">
                     <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/layouts/content-nav-sidebar"
                         class="menu-link">
                         <div>Content nav + Sidebar</div>
@@ -103,7 +92,7 @@
 
                 </li>
 
-                <li class="menu-item ">
+                <li class="menu-item">
                     <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/layouts/horizontal"
                         class="menu-link" target="_blank">
                         <div>Horizontal</div>
@@ -111,14 +100,14 @@
 
                 </li>
 
-                <li class="menu-item ">
+                <li class="menu-item">
                     <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/layouts/without-menu"
                         class="menu-link">
                         <div>Without menu</div>
                     </a>
                 </li>
 
-                <li class="menu-item ">
+                <li class="menu-item">
                     <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/layouts/without-navbar"
                         class="menu-link">
                         <div>Without navbar</div>
@@ -126,7 +115,7 @@
 
                 </li>
 
-                <li class="menu-item ">
+                <li class="menu-item">
                     <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/layouts/fluid"
                         class="menu-link">
                         <div>Fluid</div>
@@ -141,7 +130,7 @@
                     </a>
 
                 </li>
-                <li class="menu-item ">
+                <li class="menu-item">
                     <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/layouts/blank"
                         class="menu-link" target="_blank">
                         <div>Blank</div>
@@ -149,75 +138,19 @@
 
                 </li>
             </ul>
-        </li>
+        </x-menu.link>
 
-        <li class="menu-item ">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bxl-php"></i>
-                <div>Laravel Example</div>
-            </a>
-
-            <ul class="menu-sub">
-
-                <li class="menu-item ">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/laravel/user-management"
-                        class="menu-link">
-                        <div>User Management</div>
-                    </a>
-
-                </li>
-            </ul>
-        </li>
-
-        <li class="menu-item ">
-            <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/email"
-                class="menu-link">
-                <i class="menu-icon tf-icons bx bx-envelope"></i>
-                <div>Email</div>
-            </a>
-        </li>
-
-        <li class="menu-item @if($page == 'Chat') active @endif">
-            <a href="{{ route('chat') }}"
-                class="menu-link">
-                <i class="menu-icon tf-icons bx bx-chat"></i>
-                <div>Chat</div>
-            </a>
-        </li>
-
-        <li class="menu-item ">
-            <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/app/calendar"
-                class="menu-link">
-                <i class="menu-icon tf-icons bx bx-calendar"></i>
-                <div>Calendar</div>
-            </a>
-        </li>
-
-        <li class="menu-item">
-            <a href="" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-grid"></i>
-                <div>Kanban</div>
-            </a>
-        </li>
-
-        <li class="menu-item @if($page == 'Users') active @endif">
-            <a href="{{ route('users-index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-user"></i>
-                <div>User Management</div>
-            </a>
-        </li>
-
+        <x-menu.link :href="route('email')" title="Email" icon="bx-envelope" />
+        <x-menu.link :href="route('chat')" title="Chat" icon="bx-chat" />
+        <x-menu.link :href="route('calendar')" title="Calendar" icon="bx-calendar" />
+        <x-menu.link :href="route('kanban')" title="Kanban" icon="bx-grid" />
+        <x-menu.link :href="route('users-index')" title="Users" icon="bx-user" />
+        
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Help</span>
         </li>
-
-        <li class="menu-item ">
-            <a href="https://themeselection.com/support/" class="menu-link" target="_blank">
-                <i class="menu-icon tf-icons bx bx-support"></i>
-                <div>Support</div>
-            </a>
-        </li>
-
+        
+        <x-menu.link :href="route('support')" title="Support" icon="bx-support" />
     </ul>
 
 </aside>
