@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Notifications\QueuedVerifyEmail;
 use Illuminate\Contracts\Auth\CanResetPassword;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Builder;
@@ -49,6 +50,11 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
     public function prunable(): Builder
     {
         return static::where('created_at', '<=', now()->subWeek());
+    }
+
+    public function sendEmailVerificationNotification()
+    {
+        $this->notify(new QueuedVerifyEmail);
     }
 
     public function setPasswordAttribute($value): void
